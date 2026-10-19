@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Love Cursor — options</title>
+  <link rel="stylesheet" href="../common/theme.css">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body class="options">
+  <main class="options-wrap">
+    <header class="options-head">
+      <h1><span aria-hidden="true">&#9829;</span> Love Cursor</h1>
+      <p>A trail of hearts or sparkles that follows your pointer. Set it up once
+        and it follows you everywhere &mdash; except the sites you turn off.</p>
+    </header>
+
+    <form id="options-form" class="options-form">
+      <label class="row switch">
+        <input id="enabled" type="checkbox">
+        <span>Show the cursor trail</span>
+      </label>
+
+      <label class="row">
+        <span class="row-label">Style</span>
+        <select id="type">
+          <option value="hearts">Hearts &#9829;</option>
+          <option value="sparkles">Sparkles &#10038;</option>
+          <option value="both">Hearts &amp; sparkles (mixed)</option>
+        </select>
+      </label>
+
+      <label class="row">
+        <span class="row-label">Density</span>
+        <select id="density">
+          <option value="low">Gentle &mdash; a heart now and then</option>
+          <option value="medium">Medium &mdash; every so often</option>
+          <option value="high">Lots &mdash; a whole trail</option>
+        </select>
+      </label>
+
+      <label class="row">
+        <span class="row-label">Size</span>
+        <select id="size">
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+        </select>
+      </label>
+
+      <label class="row switch">
+        <input id="respect-reduced-motion" type="checkbox">
+        <span>Pause when the system asks for reduced motion</span>
+      </label>
+
+      <label class="row column">
+        <span class="row-label">Sites where it stays off</span>
+        <textarea id="disabled-sites" rows="5" spellcheck="false"
+          placeholder="one host per line, e.g.&#10;mail.google.com&#10;bank.example"></textarea>
+        <span class="hint">A host also covers its subdomains. One per line.</span>
+      </label>
+
+      <div class="actions">
+        <button id="save" class="button" type="submit">Save</button>
+        <button id="reset" class="button" type="button">Reset to defaults</button>
+        <span id="status" class="status" role="status">&nbsp;</span>
+      </div>
+    </form>
+
+    <section class="preview">
+      <h2>Preview</h2>
+      <div id="preview-stage" class="preview-stage">
+        <span class="preview-hint">Move your pointer here</span>
+      </div>
+    </section>
+
+    <footer class="options-foot">Made with love, just for you <span aria-hidden="true">&#9829;</span> &mdash; Mena</footer>
+  </main>
+
+  <script src="../common/api.js"></script>
+  <script src="../common/data.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
