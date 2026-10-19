@@ -1,0 +1,44 @@
+"use strict";
+
+/* love-cursor-ext — shared theme tokens + base controls (popup & options). */
+
+:root {
+  color-scheme: dark;
+  --bg: #0b0e22;
+  --panel: rgba(255, 255, 255, 0.05);
+  --text: #f4f1ff;
+  --muted: #b6b8d6;
+  --pink: #ff9fcf;
+  --pink-strong: #ff5fa8;
+  --line: rgba(219, 212, 255, 0.18);
+}
+
+* { box-sizing: border-box; }
+
+a { color: var(--pink); }
+
+.button {
+  font: inherit;
+  padding: 0.5rem 0.75rem;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--text);
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.button:hover { color: var(--pink); border-color: var(--pink); transform: translateY(-1px); }
+.button:active { transform: translateY(0); }
+
+select,
+input[type="text"] {
+  font: inherit;
+  padding: 0.35rem 0.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--text);
+}
+
+input[type="checkbox"] { accent-color: var(--pink); }
