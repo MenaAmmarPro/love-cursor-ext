@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Love Cursor — hearts & sparkles",
+  "version": "1.0.0",
+  "description": "A trail of hearts or sparkles that follows your pointer — toggle it, choose the style, and switch it off per site. Made for Mena.",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "Love Cursor",
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "options_ui": {
+    "page": "src/options/options.html",
+    "open_in_tab": true
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "src/common/api.js",
+        "src/common/data.js",
+        "src/content/cursor.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ]
+}
