@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Love Cursor</title>
+  <link rel="stylesheet" href="../common/theme.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body class="popup">
+  <header class="popup-head">
+    <span class="popup-heart" aria-hidden="true">&#9829;</span>
+    <div>
+      <h1>Love Cursor</h1>
+      <p class="popup-sub">A little love follows your pointer.</p>
+    </div>
+  </header>
+
+  <main class="popup-body">
+    <label class="switch">
+      <input id="enabled" type="checkbox">
+      <span>Trail is on</span>
+    </label>
+
+    <label class="field">
+      <span>Style</span>
+      <select id="type">
+        <option value="hearts">Hearts</option>
+        <option value="sparkles">Sparkles</option>
+        <option value="both">Hearts &amp; sparkles</option>
+      </select>
+    </label>
+
+    <label class="field">
+      <span>Density</span>
+      <select id="density">
+        <option value="low">Gentle</option>
+        <option value="medium">Medium</option>
+        <option value="high">Lots</option>
+      </select>
+    </label>
+
+    <button id="disable-site" class="button" type="button">Disable on this site</button>
+    <p id="site-note" class="popup-note">&nbsp;</p>
+  </main>
+
+  <footer class="popup-foot">
+    <button id="open-options" class="link-btn" type="button">All options</button>
+    <span class="popup-sign">for Mena &#9829;</span>
+  </footer>
+
+  <script src="../common/api.js"></script>
+  <script src="../common/data.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

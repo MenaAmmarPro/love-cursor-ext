@@ -1,0 +1,91 @@
+/* love-cursor-ext — popup styles */
+
+:root {
+  color-scheme: dark;
+  --bg: #0b0e22;
+  --panel: rgba(255, 255, 255, 0.05);
+  --text: #f4f1ff;
+  --muted: #b6b8d6;
+  --pink: #ff9fcf;
+  --line: rgba(219, 212, 255, 0.18);
+}
+
+* { box-sizing: border-box; }
+
+body.popup {
+  width: 260px;
+  margin: 0;
+  background: radial-gradient(ellipse at 50% 0%, #241a42 0%, var(--bg) 62%);
+  color: var(--text);
+  font: 14px/1.5 "Segoe UI", Arial, sans-serif;
+}
+
+.popup-head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 0.9rem 0.6rem;
+}
+
+.popup-heart { color: var(--pink); font-size: 1.4rem; }
+
+.popup-head h1 { margin: 0; font-size: 1rem; }
+.popup-sub { margin: 0; font-size: 0.72rem; color: var(--muted); }
+
+.popup-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0.4rem 0.9rem 0.6rem;
+}
+
+.switch { display: flex; align-items: center; gap: 0.5rem; }
+.switch input { accent-color: var(--pink); width: 1rem; height: 1rem; }
+
+.field { display: flex; justify-content: space-between; align-items: center; gap: 0.6rem; }
+.field > span { color: var(--muted); font-size: 0.82rem; }
+
+select {
+  font: inherit;
+  padding: 0.3rem 0.4rem;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--text);
+}
+
+.button {
+  font: inherit;
+  padding: 0.5rem 0.7rem;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--text);
+  cursor: pointer;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.button:hover { color: var(--pink); transform: translateY(-1px); }
+
+.popup-note { margin: 0; min-height: 1.1em; font-size: 0.72rem; color: var(--muted); }
+
+.popup-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.9rem 0.8rem;
+  border-top: 1px solid var(--line);
+}
+
+.link-btn {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  font-size: 0.78rem;
+  color: var(--pink);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.popup-sign { font-size: 0.72rem; color: var(--muted); }
